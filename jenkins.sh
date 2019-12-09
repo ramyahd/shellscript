@@ -1,15 +1,16 @@
 echo "Do you want to install jenkins in your instance"
 read var
 
-if [ $var == "yes" ]
-then
-#Step 1.  Launch an instance (Amazon Linux) 
-filename= /usr/lib/jenkins/jenkins.war
+#if [ $var == "yes" ]
+#then
 
-if [ -f "$filename" ]; then
-#Step 2.  Login to the instance, install and setup java environment 
+filename= /usr/lib/jenkins/jenkins.war
+if [ -f "$filename" ];
+then
 echo "Jenkins already present"
 else
+#Step 1.  Launch an instance (Amazon Linux) 
+#Step 2.  Login to the instance, install and setup java environment 
 sudo yum install -y git  java-1.8.0-openjdk-devel aws-cli
 sudo alternatives --config java
 
@@ -40,6 +41,4 @@ sudo service jenkins start
 
 sudo chkconfig --add jenkins
 fi
-else
-echo "Thank you"
-fi
+
