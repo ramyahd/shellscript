@@ -1,5 +1,5 @@
-echo "Do you want to install jenkins in your instance"
-read var
+#echo "Do you want to install jenkins in your instance"
+#read var
 
 #if [ $var == "yes" ]
 #then
@@ -8,6 +8,7 @@ filename= /usr/lib/jenkins/jenkins.war
 if [ -f "$filename" ];
 then
 echo "Jenkins already present"
+break
 else
 #Step 1.  Launch an instance (Amazon Linux) 
 #Step 2.  Login to the instance, install and setup java environment 
