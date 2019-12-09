@@ -4,9 +4,12 @@ read var
 if [ $var == "yes" ]
 then
 #Step 1.  Launch an instance (Amazon Linux) 
+filename= /usr/lib/jenkins/jenkins.war
 
+if [ -f "$filename" ]; then
 #Step 2.  Login to the instance, install and setup java environment 
-
+echo "Jenkins already present"
+else
 sudo yum install -y git  java-1.8.0-openjdk-devel aws-cli
 sudo alternatives --config java
 
@@ -36,6 +39,7 @@ sudo yum install jenkins
 sudo service jenkins start
 
 sudo chkconfig --add jenkins
+fi
 else
 echo "Thank you"
 fi
