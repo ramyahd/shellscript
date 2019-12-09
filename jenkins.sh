@@ -1,3 +1,8 @@
+echo "Do you want to install jenkins in your instance"
+read var
+
+if [ $var == "yes" ]
+then
 #Step 1.  Launch an instance (Amazon Linux) 
 
 #Step 2.  Login to the instance, install and setup java environment 
@@ -31,3 +36,6 @@ sudo yum install jenkins
 sudo service jenkins start
 
 sudo chkconfig --add jenkins
+else
+echo "Thank you"
+fi
