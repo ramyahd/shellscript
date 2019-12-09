@@ -4,7 +4,7 @@
 #if [ $var == "yes" ]
 #then
 
-filename= /usr/lib/jenkins/jenkins.war
+filename= jenkins.war
 if [ -f "$filename" ];
 then
 echo "Jenkins already present"
