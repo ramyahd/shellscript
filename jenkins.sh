@@ -38,4 +38,9 @@ else
 echo "Thank you"
 fi
 
+echo "This is the initial administrator password"
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
 
