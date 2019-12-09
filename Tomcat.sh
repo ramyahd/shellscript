@@ -8,7 +8,7 @@ tar -xvzf apache-tomcat-8.5.49.tar.gz
 #remove tomcat downloaded tar file
 rm -rf apache-tomcat-8.5.49.tar.gz
 #changing the port for tomcat
-sed -i 's/port="8080"/port="8880"/' apache-tomcat-8.5.49/conf/server.xml
+sed -i 's/port="8080"/port="8090"/' apache-tomcat-8.5.49/conf/server.xml
 
 #creating users in tomcat-users.xml
 
